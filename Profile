@@ -1,1 +1,1 @@
-web: gunicorn om-analytics:app 
+web: gunicorn om-analytics.wsgi --log-file -
