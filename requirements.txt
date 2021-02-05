@@ -5,7 +5,7 @@ colorama==0.4.4
 Django==3.1.6
 django-webpack-loader==0.4.1
 Flask==1.1.1
-gunicorn==20.0.4
+gunicorn
 isort==5.7.0
 itsdangerous==1.1.0
 Jinja2==2.11.3
