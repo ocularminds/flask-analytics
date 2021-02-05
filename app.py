@@ -5,5 +5,10 @@ app = Flask(__name__)
 def hello():
     return 'Hello World!'
 
+@app.route('/health')
+def health():
+    return 'Healthy. Ready!'
+
+
 if __name__ == '__main__':
     app.run()
