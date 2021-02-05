@@ -1,1 +1,0 @@
-web: gunicorn om-analytics:app --log-file -
