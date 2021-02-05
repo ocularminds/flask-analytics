@@ -1,1 +1,1 @@
-web: gunicorn om-analytics:app
+web: python app.py
