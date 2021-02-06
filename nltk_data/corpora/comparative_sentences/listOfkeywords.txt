@@ -1,0 +1,85 @@
+//This file contains list of keywords used.
+
+POS tag JJR //adjective, comparative
+POS tag RBR //adverb, comparative
+POS tag JJS //adjective, superlative
+POS tag RBS //adjective, superlative
+as <word> as //e.g. as good as
+beat
+inferior
+outstrip
+both
+on par with
+Choice
+choose
+prefer
+recommend
+outperform
+superior
+all
+up against
+less
+favor
+defeat
+twice
+thrice
+half
+same
+either
+Compete
+Number one
+one of few
+more
+like
+behind
+similar
+identical
+Versus
+first
+outdistance
+before
+double
+outsell
+nobody
+Vs
+last
+after
+thrice
+improve
+equal
+equivalent
+together
+altogether
+Alternate
+only
+outmatch
+ahead
+fraction
+outdo
+match
+unmatched
+peerless
+differ
+One of few
+outwit
+rival
+alternate
+Compare
+top
+exceed
+lead
+win
+outstrip
+none
+near
+unrivaled
+dominate
+second
+nonpareil
+advantage
+unlike
+least
+outclass
+outfox
+outdistance
+most

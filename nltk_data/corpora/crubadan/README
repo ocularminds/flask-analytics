@@ -1,0 +1,35 @@
+Language Id Corpus
+Kevin Scannell
+
+This directory contains 3-gram frequencies for 449 writing systems 
+gathered by the web crawler "An Crúbadán", as of 11 April 2010.
+See http://borel.slu.edu/crubadan/ for more information.
+
+The web crawler works at the level of "writing systems" vs. "languages",
+so for example Serbian Cyrillic and Serbian Latin are treated
+separately, as are Portuguese as spoken in Brazil vs. Portugal, etc.
+The 3-gram files are named using 2- or 3-letter "writing system codes"
+that were never intended to be exposed to the outside world.
+We are working on establishing a mapping between our codes and
+the writing systems laid out in Oliver Streiter's XNL-RDF database.  
+
+The file table.txt lists all 449 writing systems.  The first column
+contains the internal Crúbadán code, the second column contains the
+ISO 639-3 code for the language represented by the writing system, and
+the third column is an English language description.
+
+Copyright 2010 Kevin P. Scannell <kscanne at gmail dot com>
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
