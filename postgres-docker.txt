@@ -1,3 +1,6 @@
 docker run -d --name postgresql-server --network app-tier -p 5432:5432 -e POSTGRESQL_PASSWORD=postgres bitnami/postgresql:latest
 
 docker run -it --rm --network app-tier bitnami/postgresql:latest psql -h postgresql-server -U postgres
+
+heroku addons:create heroku-postgresql:hobby-dev --app om-analytics
+heroku run python manage.py db upgrade --app om-analytics
