@@ -6,6 +6,8 @@ from models import Result
 from stop_words import stops
 from collections import Counter
 from bs4 import BeautifulSoup
+from flask import jsonify
+from rq.job import Job
 
 class Processor:
 
@@ -14,6 +16,7 @@ class Processor:
         self.r = r
         self.errors = []
         self.results = {}
+        self.job_id = None
 
     def process(self):
         raw = BeautifulSoup(self.r.text, 'html.parser').get_text()
@@ -40,7 +43,23 @@ class Processor:
             )
             db.session.add(result)
             db.session.commit()
+            self.job_id = result.id
         except Exception as error:
             print("Unable to add item to database.", error)
             self.errors.append("Unable to add item to database.")
-        return {"errors": self.errors, "results": self.results}
+        return {"errors": self.errors, "job_id": self.job_id}
+
+    def result(id):
+        job = Job.fetch(id)
+        if job.is_finished:
+            result = Result.query.filter_by(id=job.result).first()
+            results = sorted(
+                result.result_no_stop_words.items(),
+                key=operator.itemgetter(1),
+                reverse=True
+            )[:10]
+            return jsonify(results)
+        else:
+            return "Processing...", 202
+
+
